@@ -1,0 +1,20 @@
+// PURE FUNCTION
+// A pure function always gives the same output
+// for the same input and does not modify external data.
+
+// Example 1: Addition
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(10, 20)); // 30
+console.log(add(5, 15));  // 20
+
+
+// Example 2: Square of a number
+function square(n) {
+    return n * n;
+}
+
+console.log(square(5)); // 25
+console.log(square(8)); // 64
