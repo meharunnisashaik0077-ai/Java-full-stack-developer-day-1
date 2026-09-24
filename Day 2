@@ -1,0 +1,117 @@
+// PURE FUNCTION
+// A pure function always gives the same output
+// for the same input and does not modify external data.
+
+// Example 1: Addition
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(10, 20)); // 30
+console.log(add(5, 15));  // 20
+
+
+// Example 2: Square of a number
+function square(n) {
+    return n * n;
+}
+
+console.log(square(5)); // 25
+console.log(square(8)); // 64
+// ANONYMOUS FUNCTION
+// An anonymous function is a function without a name.
+// It can be stored in a variable and called using that variable.
+
+// Example 1: Addition
+const add = function (a, b) {
+    return a + b;
+};
+
+console.log(add(10, 20)); // 30
+
+
+// Example 2: Greeting
+const greet = function (name) {
+    return `Hello, ${name}!`;
+};
+
+console.log(greet("Meharunnisa")); // Hello, Meharunnisa!
+
+
+// Example 3: Square
+const square = function (number) {
+    return number * number;
+};
+
+console.log(square(5)); // 25
+// ARROW FUNCTION
+// Arrow functions provide a shorter syntax for writing functions.
+
+// Example 1: Addition
+const add = (a, b) => {
+    return a + b;
+};
+
+console.log(add(10, 20)); // 30
+
+
+// Example 2: Single parameter
+const square = n => n * n;
+
+console.log(square(5)); // 25
+
+
+// Example 3: Greeting
+const greet = name => `Hello, ${name}!`;
+
+console.log(greet("Meharunnisa")); // Hello, Meharunnisa
+
+
+// Example 4: Multiplication
+const multiply = (a, b) => a * b;
+
+console.log(multiply(5, 4)); // 20
+// CALLBACK FUNCTION
+// A callback function is a function passed as an argument
+// to another function and executed later.
+
+// Example 1: Basic Callback
+
+function greet(name, callback) {
+    console.log("Hello, " + name);
+    callback();
+}
+
+function message() {
+    console.log("Welcome to JavaScript!");
+}
+
+greet("Meharunnisa", message);
+
+
+// Example 2: Callback with calculation
+
+function calculate(a, b, callback) {
+    const result = a + b;
+    callback(result);
+}
+
+function displayResult(result) {
+    console.log("Result:", result);
+}
+
+calculate(10, 20, displayResult);
+
+
+// Example 3: Callback using setTimeout
+
+function fetchData(callback) {
+    setTimeout(() => {
+        const data = "Data fetched successfully!";
+        callback(data);
+    }, 2000);
+}
+
+fetchData(function(result) {
+    console.log(result);
+});
